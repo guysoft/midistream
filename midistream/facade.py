@@ -3,15 +3,9 @@ from enum import IntEnum
 from typing import AnyStr
 import traceback
 
-try:
-    from . import mididriver
-except ImportError:
-    traceback.print_exc()
+from . import mididriver
 
-try:
-    import libmidi  # noqa
-except ImportError:
-    pass
+import libmidi  # noqa
 
 
 class MIDIException(Exception):
